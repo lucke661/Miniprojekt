@@ -1,6 +1,10 @@
-﻿Public Class Form1
+﻿Imports System.Data.OleDb
+Imports Microsoft.VisualBasic.Devices
+
+Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dbConnect()
+        dadagbok.Fill(dsdagbok, "dagbok")
 
     End Sub
     Private Sub Lista_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -8,11 +12,19 @@
 
 
         For i = 0 To dsdagbok.Tables("dagbok").Rows.Count - 1
-            listItem = lsvAnteckning.Items.Add(dsdagbok.Tables("dagbok").Rows(i)("datum"))
-
+            listItem = lsvAnteckning.Items.Add(dsdagbok.Tables("dagbok").Rows(i)("name"))
+            listItem.SubItems.Add(dsdagbok.Tables("dagbok").Rows(i)("id"))
         Next
-    End Sub
 
+
+
+    End Sub
+    Private Sub lsvAnteckning_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lsvAnteckning.SelectedIndexChanged
+        'Rot nod (artist) visa alla album
+        showDataGrid("SELECT * FROM dagbok where id = " & lsvAnteckning.FocusedItem.SubItems(1).Text)
+        'Förhindra att man kan lägga till låt
+
+    End Sub
     Private Sub showDataGrid(sql As String)
         ' Rensa befintlig data
         grdDetalj.DataSource = Nothing
@@ -29,34 +41,6 @@
 
     Private Sub btnNyAktivitet_Click(sender As Object, e As EventArgs) Handles btnNyAktivitet.Click
         If NyAktivitet.ShowDialog() = DialogResult.OK Then
-            'Ladda om trädvyn
-
-        End If
-
-    End Sub
-
-    'Private Sub btnNyttAlbum_Click(sender As Object, e As EventArgs) Handles btnNyttAlbum.Click
-    'If frmNyttAlbum.ShowDialog() = DialogResult.OK Then
-    'Ladda om trädvyn
-    '       reloadTree()
-    'End If
-    'End Sub
-
-    'Private Sub btnNyLat_Click(sender As Object, e As EventArgs) Handles btnNyLat.Click
-    'Den valda nodens tag har formatet "Albumid=XXX" dvs albumid-talet börjar i position 8
-    'Dim albumID As Integer = tvwArtister.SelectedNode.Tag.ToString.Substring(8)
-    '   frmNyLat.albumId = albumID
-    'If frmNyLat.ShowDialog() = DialogResult.OK Then
-    '       showDataGrid("select * from tracks where " & tvwArtister.SelectedNode.Tag)
-    'End If
-    'End Sub
-
-    Private Sub btnRedigeraDagbok_Click(sender As Object, e As EventArgs) Handles btnRedigeraDagbok.Click
-        'Noden innehåller uppgift om artistens id enligt
-        'Artistid=XXX, dvs artistid börjar i position 9
-        'Dim anteckningsId As Integer = tvwAnteckningar.SelectedNode.Tag.ToString.Substring(9)
-        'NyAnteckning.anteckningsid = anteckningsId
-        If NyAnteckning.ShowDialog() = DialogResult.OK Then
             'Ladda om trädvyn
 
         End If

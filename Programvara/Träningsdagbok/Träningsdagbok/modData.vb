@@ -23,6 +23,8 @@ Module modData
         ' Välj data att visa
         sql = "SELECT * FROM dagbok"
 
+        ' Koppla in dataadaptern och fyll den
+        dadagbok = New OleDbDataAdapter(sql, con)
 
     End Sub
     Public Function hamtaData(sql As String) As DataTable

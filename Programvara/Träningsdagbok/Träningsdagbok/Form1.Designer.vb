@@ -24,8 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.btnNyAktivitet = New System.Windows.Forms.Button()
         Me.lblNodTag = New System.Windows.Forms.Label()
-        Me.btnRedigeraDagbok = New System.Windows.Forms.Button()
         Me.lsvAnteckning = New System.Windows.Forms.ListView()
+        Me.ColAnteckningar = New System.Windows.Forms.ColumnHeader()
         Me.grdDetalj = New System.Windows.Forms.DataGridView()
         CType(Me.grdDetalj, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,22 +48,22 @@ Partial Class Form1
         Me.lblNodTag.TabIndex = 3
         Me.lblNodTag.Text = "lblNodTag"
         '
-        'btnRedigeraDagbok
-        '
-        Me.btnRedigeraDagbok.Location = New System.Drawing.Point(373, 377)
-        Me.btnRedigeraDagbok.Name = "btnRedigeraDagbok"
-        Me.btnRedigeraDagbok.Size = New System.Drawing.Size(114, 33)
-        Me.btnRedigeraDagbok.TabIndex = 4
-        Me.btnRedigeraDagbok.Text = "Ändra Anteckning"
-        Me.btnRedigeraDagbok.UseVisualStyleBackColor = True
-        '
         'lsvAnteckning
         '
+        Me.lsvAnteckning.Alignment = System.Windows.Forms.ListViewAlignment.Left
+        Me.lsvAnteckning.AutoArrange = False
+        Me.lsvAnteckning.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColAnteckningar})
         Me.lsvAnteckning.Location = New System.Drawing.Point(-2, -1)
         Me.lsvAnteckning.Name = "lsvAnteckning"
         Me.lsvAnteckning.Size = New System.Drawing.Size(196, 372)
         Me.lsvAnteckning.TabIndex = 5
         Me.lsvAnteckning.UseCompatibleStateImageBehavior = False
+        Me.lsvAnteckning.View = System.Windows.Forms.View.Details
+        '
+        'ColAnteckningar
+        '
+        Me.ColAnteckningar.Text = "Anteckningar"
+        Me.ColAnteckningar.Width = 150
         '
         'grdDetalj
         '
@@ -81,7 +81,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.grdDetalj)
         Me.Controls.Add(Me.lsvAnteckning)
-        Me.Controls.Add(Me.btnRedigeraDagbok)
         Me.Controls.Add(Me.lblNodTag)
         Me.Controls.Add(Me.btnNyAktivitet)
         Me.Name = "Form1"
@@ -93,7 +92,7 @@ Partial Class Form1
     End Sub
     Friend WithEvents btnNyAktivitet As Button
     Friend WithEvents lblNodTag As Label
-    Friend WithEvents btnRedigeraDagbok As Button
     Friend WithEvents lsvAnteckning As ListView
     Friend WithEvents grdDetalj As DataGridView
+    Friend WithEvents ColAnteckningar As ColumnHeader
 End Class

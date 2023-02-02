@@ -26,11 +26,13 @@ Partial Class NyAktivitet
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSpara = New System.Windows.Forms.Button()
         Me.btnAvbryt = New System.Windows.Forms.Button()
+        Me.chbMataTid = New System.Windows.Forms.CheckBox()
+        Me.chbMataDistans = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtAktivitet
         '
-        Me.txtAktivitet.Location = New System.Drawing.Point(119, 70)
+        Me.txtAktivitet.Location = New System.Drawing.Point(120, 38)
         Me.txtAktivitet.Name = "txtAktivitet"
         Me.txtAktivitet.Size = New System.Drawing.Size(100, 23)
         Me.txtAktivitet.TabIndex = 0
@@ -38,7 +40,7 @@ Partial Class NyAktivitet
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(48, 73)
+        Me.Label1.Location = New System.Drawing.Point(60, 41)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(54, 15)
         Me.Label1.TabIndex = 1
@@ -62,11 +64,33 @@ Partial Class NyAktivitet
         Me.btnAvbryt.Text = "Avbryt"
         Me.btnAvbryt.UseVisualStyleBackColor = True
         '
+        'chbMataTid
+        '
+        Me.chbMataTid.AutoSize = True
+        Me.chbMataTid.Location = New System.Drawing.Point(120, 76)
+        Me.chbMataTid.Name = "chbMataTid"
+        Me.chbMataTid.Size = New System.Drawing.Size(77, 19)
+        Me.chbMataTid.TabIndex = 4
+        Me.chbMataTid.Text = "Mäta Tid?"
+        Me.chbMataTid.UseVisualStyleBackColor = True
+        '
+        'chbMataDistans
+        '
+        Me.chbMataDistans.AutoSize = True
+        Me.chbMataDistans.Location = New System.Drawing.Point(120, 101)
+        Me.chbMataDistans.Name = "chbMataDistans"
+        Me.chbMataDistans.Size = New System.Drawing.Size(99, 19)
+        Me.chbMataDistans.TabIndex = 5
+        Me.chbMataDistans.Text = "Mäta Distans?"
+        Me.chbMataDistans.UseVisualStyleBackColor = True
+        '
         'NyAktivitet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(280, 195)
+        Me.Controls.Add(Me.chbMataDistans)
+        Me.Controls.Add(Me.chbMataTid)
         Me.Controls.Add(Me.btnAvbryt)
         Me.Controls.Add(Me.btnSpara)
         Me.Controls.Add(Me.Label1)
@@ -85,4 +109,6 @@ Partial Class NyAktivitet
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSpara As Button
     Friend WithEvents btnAvbryt As Button
+    Friend WithEvents chbMataTid As CheckBox
+    Friend WithEvents chbMataDistans As CheckBox
 End Class
