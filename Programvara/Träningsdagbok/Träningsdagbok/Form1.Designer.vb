@@ -27,6 +27,9 @@ Partial Class Form1
         Me.lsvAnteckning = New System.Windows.Forms.ListView()
         Me.ColAnteckningar = New System.Windows.Forms.ColumnHeader()
         Me.grdDetalj = New System.Windows.Forms.DataGridView()
+        Me.btnNyAnteckning = New System.Windows.Forms.Button()
+        Me.btnÄndraAktivitet = New System.Windows.Forms.Button()
+        Me.btnÄndraAnteckning = New System.Windows.Forms.Button()
         CType(Me.grdDetalj, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,15 +77,47 @@ Partial Class Form1
         Me.grdDetalj.Size = New System.Drawing.Size(601, 372)
         Me.grdDetalj.TabIndex = 6
         '
+        'btnNyAnteckning
+        '
+        Me.btnNyAnteckning.Location = New System.Drawing.Point(362, 377)
+        Me.btnNyAnteckning.Name = "btnNyAnteckning"
+        Me.btnNyAnteckning.Size = New System.Drawing.Size(103, 32)
+        Me.btnNyAnteckning.TabIndex = 7
+        Me.btnNyAnteckning.Text = "Ny Anteckning"
+        Me.btnNyAnteckning.UseVisualStyleBackColor = True
+        '
+        'btnÄndraAktivitet
+        '
+        Me.btnÄndraAktivitet.Location = New System.Drawing.Point(127, 378)
+        Me.btnÄndraAktivitet.Name = "btnÄndraAktivitet"
+        Me.btnÄndraAktivitet.Size = New System.Drawing.Size(117, 33)
+        Me.btnÄndraAktivitet.TabIndex = 8
+        Me.btnÄndraAktivitet.Text = "Ändra Aktivitet"
+        Me.btnÄndraAktivitet.UseVisualStyleBackColor = True
+        '
+        'btnÄndraAnteckning
+        '
+        Me.btnÄndraAnteckning.Location = New System.Drawing.Point(471, 376)
+        Me.btnÄndraAnteckning.Name = "btnÄndraAnteckning"
+        Me.btnÄndraAnteckning.Size = New System.Drawing.Size(117, 33)
+        Me.btnÄndraAnteckning.TabIndex = 9
+        Me.btnÄndraAnteckning.Text = "Ändra Anteckning"
+        Me.btnÄndraAnteckning.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnÄndraAnteckning)
+        Me.Controls.Add(Me.btnÄndraAktivitet)
+        Me.Controls.Add(Me.btnNyAnteckning)
         Me.Controls.Add(Me.grdDetalj)
         Me.Controls.Add(Me.lsvAnteckning)
         Me.Controls.Add(Me.lblNodTag)
         Me.Controls.Add(Me.btnNyAktivitet)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.grdDetalj, System.ComponentModel.ISupportInitialize).EndInit()
@@ -95,4 +130,7 @@ Partial Class Form1
     Friend WithEvents lsvAnteckning As ListView
     Friend WithEvents grdDetalj As DataGridView
     Friend WithEvents ColAnteckningar As ColumnHeader
+    Friend WithEvents btnNyAnteckning As Button
+    Friend WithEvents btnÄndraAktivitet As Button
+    Friend WithEvents btnÄndraAnteckning As Button
 End Class

@@ -32,3 +32,5 @@ C:\Users\LucasNordqvist\source\repos\Miniprojekt\Programvara\Träningsdagbok\Tr�
 C:\Users\LucasNordqvist\source\repos\Miniprojekt\Programvara\Träningsdagbok\Träningsdagbok\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\LucasNordqvist\source\repos\Miniprojekt\Programvara\Träningsdagbok\Träningsdagbok\obj\Debug\net6.0-windows\Träningsdagbok.vbproj.CopyComplete
 C:\Users\LucasNordqvist\source\repos\Miniprojekt\Programvara\Träningsdagbok\Träningsdagbok\obj\Debug\net6.0-windows\Träningsdagbok.NyAnteckning.resources
+C:\Users\LucasNordqvist\source\repos\Miniprojekt\Programvara\Träningsdagbok\Träningsdagbok\obj\Debug\net6.0-windows\Träningsdagbok.ändraAktivitet.resources
+C:\Users\LucasNordqvist\source\repos\Miniprojekt\Programvara\Träningsdagbok\Träningsdagbok\obj\Debug\net6.0-windows\Träningsdagbok.ändraAnteckning.resources
